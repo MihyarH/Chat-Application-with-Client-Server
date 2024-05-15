@@ -1,0 +1,5 @@
+# ninja log v5
+514	601	1715778093912406967	OS2_Project	6acab28ad80ec954
+5	514	1715778093822885772	CMakeFiles/OS2_Project.dir/Server.cpp.o	ac5a59d50bf0c1de
+3	370	1715778787011990530	CMakeFiles/OS2_Project.dir/Client.cpp.o	d5d1654626b5e0c8
+3	402	1715779102364109358	CMakeFiles/OS2_Project.dir/Server.cpp.o	ac5a59d50bf0c1de

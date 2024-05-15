@@ -1,0 +1,3 @@
+/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/cmake-build-debug/CMakeFiles/OS2_Project.dir
+/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
