@@ -1,0 +1,4 @@
+-I/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src
+-o
+/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/cmake-build-debug/src/client/moc_ChatClient.cpp
+/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/client/ChatClient.h
