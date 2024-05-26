@@ -1,3 +1,4 @@
+#include "server.h"
 #include <iostream>
 #include <vector>
 #include <thread>
@@ -10,27 +11,63 @@
 
 const int PORT = 8888;
 
+struct Client {
+    int socket;
+    std::string username;
+};
+
 // Global variables for handling clients and threads
-std::vector<int> client_sockets;
-std::vector<std::thread> client_threads;
+std::vector<Client> clients;
 std::mutex client_mutex;
 
-// Function to handle each client connection
 void handle_client(int client_socket) {
     char buffer[1024];
+    std::string username;
+
+    // Handle login credentials
+    int length;
+    recv(client_socket, &length, sizeof(length), 0);
+    recv(client_socket, buffer, length, 0);
+    buffer[length] = '\0';
+    if (strncmp(buffer, "USER:", 5) == 0) {
+        username = buffer + 5;
+    }
+    recv(client_socket, &length, sizeof(length), 0);
+    recv(client_socket, buffer, length, 0);
+    buffer[length] = '\0';
+    if (strncmp(buffer, "PASS:", 5) == 0) {
+        std::string password = buffer + 5;
+        // Handle password verification if needed
+    }
+
+    {
+        std::lock_guard<std::mutex> lock(client_mutex);
+        clients.push_back({client_socket, username});
+        std::cout << "Added client: " << username << " with socket: " << client_socket << std::endl;
+    }
 
     while (true) {
-        memset(buffer, 0, sizeof(buffer));
-        int read_size = recv(client_socket, buffer, sizeof(buffer), 0);
-        if (read_size <= 0) {
+        int received = recv(client_socket, &length, sizeof(length), 0);
+        if (received <= 0) {
+            std::cout << "Client disconnected or error: " << client_socket << std::endl;
             break; // Connection closed or error
         }
 
-        // Lock the mutex to safely update shared resources
+        received = recv(client_socket, buffer, length, 0);
+        if (received <= 0) {
+            std::cout << "Client disconnected or error: " << client_socket << std::endl;
+            break; // Connection closed or error
+        }
+        buffer[length] = '\0';
+        std::string message = username + ": " + buffer;
+
         std::lock_guard<std::mutex> lock(client_mutex);
-        for (int sock : client_sockets) {
-            if (sock != client_socket) {
-                send(sock, buffer, read_size, 0); // Broadcast message to other clients
+        for (const auto& client : clients) {
+            if (client.socket != client_socket) {
+                int msg_length = message.length();
+                send(client.socket, &msg_length, sizeof(msg_length), 0);
+                send(client.socket, message.c_str(), msg_length, 0);
+                std::cout << "Sent message to client: " << client.socket << std::endl;
             }
         }
     }
@@ -38,24 +75,24 @@ void handle_client(int client_socket) {
     // Cleanup on disconnection
     close(client_socket);
     std::lock_guard<std::mutex> lock(client_mutex);
-    client_sockets.erase(std::remove(client_sockets.begin(), client_sockets.end(), client_socket), client_sockets.end());
-    std::cout << "Client disconnected: " << client_socket << std::endl;
+    clients.erase(std::remove_if(clients.begin(), clients.end(), [client_socket](const Client& client) {
+        return client.socket == client_socket;
+    }), clients.end());
+    std::cout << "Removed client: " << client_socket << std::endl;
 }
 
-int main() {
+void run_server() {
     int server_fd, client_socket;
     struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
 
-    // Setting up the server socket
     server_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (server_fd == 0) {
         perror("Socket creation failed");
         exit(EXIT_FAILURE);
     }
 
-    // Socket options
     if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt))) {
         perror("setsockopt");
         exit(EXIT_FAILURE);
@@ -65,13 +102,12 @@ int main() {
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(PORT);
 
-    // Bind the socket to the port
     if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0) {
         perror("bind failed");
         exit(EXIT_FAILURE);
     }
 
-    if (listen(server_fd, 10) < 0) {  // Listening for up to 10 clients
+    if (listen(server_fd, 10) < 0) {
         perror("listen");
         exit(EXIT_FAILURE);
     }
@@ -86,15 +122,6 @@ int main() {
         }
 
         std::cout << "New connection: " << client_socket << std::endl;
-
-        {
-            // Locking while modifying the shared resources
-            std::lock_guard<std::mutex> lock(client_mutex);
-            client_sockets.push_back(client_socket);
-            client_threads.emplace_back(handle_client, client_socket);
-            client_threads.back().detach();  // Detach the thread to handle independently
-        }
+        std::thread(handle_client, client_socket).detach();
     }
-
-    return 0;
 }

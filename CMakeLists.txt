@@ -12,7 +12,7 @@ find_package(Threads REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 set(CLIENT_SOURCES
-        src/client/client.cpp
+        src/client/main.cpp
         src/client/ChatClient.cpp
 )
 
@@ -29,5 +29,8 @@ add_executable(client
 
 target_link_libraries(client Qt6::Widgets Threads::Threads)
 
-add_executable(server src/server/server.cpp)
+add_executable(server
+        src/server/main.cpp
+        src/server/server.cpp
+)
 target_link_libraries(server Threads::Threads)

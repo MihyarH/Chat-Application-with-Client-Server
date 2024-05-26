@@ -3,17 +3,20 @@
 #include <QHBoxLayout>
 #include <QApplication>
 #include <QScrollBar>
+#include <QFileDialog>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <cstring>
+#include <iostream>
 
-ChatClient::ChatClient(const char* server_ip, int port, QWidget* parent)
-    : QWidget(parent), server_ip(server_ip), port(port), sock(-1) {
+ChatClient::ChatClient(const char* server_ip, int port, const QString& username, const QString& password, QWidget* parent)
+    : QWidget(parent), server_ip(server_ip), port(port), sock(-1), username(username) {
     setupUI();
     connectSignals();
     sock = connectToServer();
     if (sock != -1) {
+        sendLoginDetails(username, password);
         recvThread = std::thread(&ChatClient::receiveMessages, this);
         updateStatus("Connected to server.");
     } else {
@@ -43,8 +46,11 @@ void ChatClient::setupUI() {
     input->setStyleSheet("background-color: #ffffff; color: #000000; padding: 10px; border: 1px solid #cccccc; border-radius: 10px;");
     sendButton = new QPushButton("Send");
     sendButton->setStyleSheet("background-color: #0084ff; color: white; padding: 10px; border-radius: 10px;");
+    fileButton = new QPushButton("Send File");
+    fileButton->setStyleSheet("background-color: #0084ff; color: white; padding: 10px; border-radius: 10px;");
     inputLayout->addWidget(input);
     inputLayout->addWidget(sendButton);
+    inputLayout->addWidget(fileButton);
     mainLayout->addLayout(inputLayout);
 
     statusBar = new QStatusBar;
@@ -58,6 +64,7 @@ void ChatClient::setupUI() {
 
 void ChatClient::connectSignals() {
     connect(sendButton, &QPushButton::clicked, this, &ChatClient::sendMessage);
+    connect(fileButton, &QPushButton::clicked, this, &ChatClient::selectFile);
     connect(input, &QLineEdit::returnPressed, this, &ChatClient::handleReturnPressed);
 }
 
@@ -88,13 +95,46 @@ void ChatClient::receiveMessages() {
             updateStatus("Disconnected from server.");
             break;
         }
+
         received = recv(sock, buffer, length, 0);
         if (received <= 0) {
             updateStatus("Disconnected from server.");
             break;
         }
-        buffer[received] = '\0';
-        chatBox->append("<b style='color: blue;'>Server:</b> " + QString::fromStdString(buffer));
+        buffer[length] = '\0';
+
+        std::string message(buffer);
+        std::size_t pos = message.find(": ");
+        if (pos != std::string::npos) {
+            std::string username = message.substr(0, pos);
+            std::string text = message.substr(pos + 2);
+
+            chatBox->append(QString("<b style='color: cyan;'>%1:</b> <span style='color: black;'>%2</span>")
+                .arg(QString::fromStdString(username))
+                .arg(QString::fromStdString(text)));
+        } else {
+            chatBox->append(QString("<span style='color: black;'>%1</span>")
+                .arg(QString::fromStdString(message)));
+        }
+    }
+}
+
+void ChatClient::sendLoginDetails(const QString& username, const QString& password) {
+    std::string user_msg = "USER:" + username.toStdString();
+    int length = user_msg.length();
+    send(sock, &length, sizeof(length), 0);
+    send(sock, user_msg.c_str(), length, 0);
+
+    std::string pass_msg = "PASS:" + password.toStdString();
+    length = pass_msg.length();
+    send(sock, &length, sizeof(length), 0);
+    send(sock, pass_msg.c_str(), length, 0);
+}
+
+void ChatClient::selectFile() {
+    QString filePath = QFileDialog::getOpenFileName(this, "Select File to Send");
+    if (!filePath.isEmpty()) {
+        // Implement the file sending logic here
     }
 }
 

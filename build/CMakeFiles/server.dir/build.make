@@ -69,10 +69,24 @@ include CMakeFiles/server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/server.dir/flags.make
 
+CMakeFiles/server.dir/src/server/main.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/src/server/main.cpp.o: /Users/mihyar/Desktop/OS2\ Project/Chat-Application-with-Client-Server/src/server/main.cpp
+CMakeFiles/server.dir/src/server/main.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/src/server/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/server/main.cpp.o -MF CMakeFiles/server.dir/src/server/main.cpp.o.d -o CMakeFiles/server.dir/src/server/main.cpp.o -c "/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/server/main.cpp"
+
+CMakeFiles/server.dir/src/server/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/src/server/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/server/main.cpp" > CMakeFiles/server.dir/src/server/main.cpp.i
+
+CMakeFiles/server.dir/src/server/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/server/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/server/main.cpp" -o CMakeFiles/server.dir/src/server/main.cpp.s
+
 CMakeFiles/server.dir/src/server/server.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/server/server.cpp.o: /Users/mihyar/Desktop/OS2\ Project/Chat-Application-with-Client-Server/src/server/server.cpp
 CMakeFiles/server.dir/src/server/server.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/src/server/server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/src/server/server.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/server/server.cpp.o -MF CMakeFiles/server.dir/src/server/server.cpp.o.d -o CMakeFiles/server.dir/src/server/server.cpp.o -c "/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/server/server.cpp"
 
 CMakeFiles/server.dir/src/server/server.cpp.i: cmake_force
@@ -83,33 +97,17 @@ CMakeFiles/server.dir/src/server/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/server/server.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/server/server.cpp" -o CMakeFiles/server.dir/src/server/server.cpp.s
 
-CMakeFiles/server.dir/src/server/ChatServer.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/server/ChatServer.cpp.o: /Users/mihyar/Desktop/OS2\ Project/Chat-Application-with-Client-Server/src/server/ChatServer.cpp
-CMakeFiles/server.dir/src/server/ChatServer.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/src/server/ChatServer.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/server/ChatServer.cpp.o -MF CMakeFiles/server.dir/src/server/ChatServer.cpp.o.d -o CMakeFiles/server.dir/src/server/ChatServer.cpp.o -c "/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/server/ChatServer.cpp"
-
-CMakeFiles/server.dir/src/server/ChatServer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/src/server/ChatServer.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/server/ChatServer.cpp" > CMakeFiles/server.dir/src/server/ChatServer.cpp.i
-
-CMakeFiles/server.dir/src/server/ChatServer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/server/ChatServer.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/src/server/ChatServer.cpp" -o CMakeFiles/server.dir/src/server/ChatServer.cpp.s
-
 # Object files for target server
 server_OBJECTS = \
-"CMakeFiles/server.dir/src/server/server.cpp.o" \
-"CMakeFiles/server.dir/src/server/ChatServer.cpp.o"
+"CMakeFiles/server.dir/src/server/main.cpp.o" \
+"CMakeFiles/server.dir/src/server/server.cpp.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
+server: CMakeFiles/server.dir/src/server/main.cpp.o
 server: CMakeFiles/server.dir/src/server/server.cpp.o
-server: CMakeFiles/server.dir/src/server/ChatServer.cpp.o
 server: CMakeFiles/server.dir/build.make
-server: /opt/homebrew/lib/QtNetwork.framework/Versions/A/QtNetwork
-server: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 server: CMakeFiles/server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
