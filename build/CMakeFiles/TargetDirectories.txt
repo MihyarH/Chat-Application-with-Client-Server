@@ -1,4 +1,4 @@
-/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles/client.dir
-/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles/server.dir
-/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles/edit_cache.dir
-/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles/rebuild_cache.dir
+/home/mihyar/Desktop/OS_Project/Chat-Application-with-Client-Server/build/CMakeFiles/client.dir
+/home/mihyar/Desktop/OS_Project/Chat-Application-with-Client-Server/build/CMakeFiles/server.dir
+/home/mihyar/Desktop/OS_Project/Chat-Application-with-Client-Server/build/CMakeFiles/edit_cache.dir
+/home/mihyar/Desktop/OS_Project/Chat-Application-with-Client-Server/build/CMakeFiles/rebuild_cache.dir
