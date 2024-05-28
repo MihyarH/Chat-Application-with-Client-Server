@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_PREFIX_PATH "/opt/homebrew/opt/qt/lib/cmake")
 
 find_package(Qt6Widgets REQUIRED)
+find_package(Qt6Network REQUIRED)
 find_package(Threads REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/src)
@@ -27,10 +28,10 @@ add_executable(client
         ${CLIENT_MOCS}
 )
 
-target_link_libraries(client Qt6::Widgets Threads::Threads)
+target_link_libraries(client Qt6::Widgets Qt6::Network Threads::Threads)
 
 add_executable(server
         src/server/main.cpp
         src/server/server.cpp
 )
-target_link_libraries(server Threads::Threads)
+target_link_libraries(server Qt6::Network Threads::Threads)

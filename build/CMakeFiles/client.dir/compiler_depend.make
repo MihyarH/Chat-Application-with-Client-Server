@@ -961,6 +961,7 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o: /Users/mihyar/Desktop/OS2\ Pr
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/q23utility.h \
+  /opt/homebrew/include/QtCore/qabstractitemmodel.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
   /opt/homebrew/include/QtCore/qanystringview.h \
   /opt/homebrew/include/QtCore/qarraydata.h \
@@ -995,7 +996,6 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o: /Users/mihyar/Desktop/OS2\ Pr
   /opt/homebrew/include/QtCore/qdatetime.h \
   /opt/homebrew/include/QtCore/qdeadlinetimer.h \
   /opt/homebrew/include/QtCore/qdebug.h \
-  /opt/homebrew/include/QtCore/qdir.h \
   /opt/homebrew/include/QtCore/qelapsedtimer.h \
   /opt/homebrew/include/QtCore/qendian.h \
   /opt/homebrew/include/QtCore/qeventloop.h \
@@ -1042,6 +1042,7 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o: /Users/mihyar/Desktop/OS2\ Pr
   /opt/homebrew/include/QtCore/qprocessordetection.h \
   /opt/homebrew/include/QtCore/qrect.h \
   /opt/homebrew/include/QtCore/qrefcount.h \
+  /opt/homebrew/include/QtCore/qregularexpression.h \
   /opt/homebrew/include/QtCore/qscopedpointer.h \
   /opt/homebrew/include/QtCore/qscopeguard.h \
   /opt/homebrew/include/QtCore/qset.h \
@@ -1122,27 +1123,44 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o: /Users/mihyar/Desktop/OS2\ Pr
   /opt/homebrew/include/QtGui/qtguiexports.h \
   /opt/homebrew/include/QtGui/qtguiglobal.h \
   /opt/homebrew/include/QtGui/qtransform.h \
+  /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
+  /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
   /opt/homebrew/include/QtWidgets/qabstractslider.h \
+  /opt/homebrew/include/QtWidgets/qabstractspinbox.h \
   /opt/homebrew/include/QtWidgets/qboxlayout.h \
   /opt/homebrew/include/QtWidgets/qdialog.h \
+  /opt/homebrew/include/QtWidgets/qdialogbuttonbox.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
   /opt/homebrew/include/QtWidgets/qgridlayout.h \
   /opt/homebrew/include/QtWidgets/qlayout.h \
   /opt/homebrew/include/QtWidgets/qlayoutitem.h \
+  /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
+  /opt/homebrew/include/QtWidgets/qslider.h \
+  /opt/homebrew/include/QtWidgets/qstyle.h \
+  /opt/homebrew/include/QtWidgets/qstyleoption.h \
+  /opt/homebrew/include/QtWidgets/qtabbar.h \
+  /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/include/QtWidgets/qtwidgets-config.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDir \
+  /opt/homebrew/lib/QtCore.framework/Headers/QFile \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTextStream \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdir.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qfile.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QScrollBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar \
@@ -1151,8 +1169,9 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o: /Users/mihyar/Desktop/OS2\ Pr
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qfiledialog.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollbar.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h \
@@ -2082,6 +2101,7 @@ CMakeFiles/client.dir/src/client/main.cpp.o: /Users/mihyar/Desktop/OS2\ Project/
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/q23utility.h \
+  /opt/homebrew/include/QtCore/qabstractitemmodel.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
   /opt/homebrew/include/QtCore/qanystringview.h \
   /opt/homebrew/include/QtCore/qarraydata.h \
@@ -2156,6 +2176,7 @@ CMakeFiles/client.dir/src/client/main.cpp.o: /Users/mihyar/Desktop/OS2\ Project/
   /opt/homebrew/include/QtCore/qprocessordetection.h \
   /opt/homebrew/include/QtCore/qrect.h \
   /opt/homebrew/include/QtCore/qrefcount.h \
+  /opt/homebrew/include/QtCore/qregularexpression.h \
   /opt/homebrew/include/QtCore/qscopedpointer.h \
   /opt/homebrew/include/QtCore/qscopeguard.h \
   /opt/homebrew/include/QtCore/qset.h \
@@ -2235,13 +2256,23 @@ CMakeFiles/client.dir/src/client/main.cpp.o: /Users/mihyar/Desktop/OS2\ Project/
   /opt/homebrew/include/QtGui/qtguiexports.h \
   /opt/homebrew/include/QtGui/qtguiglobal.h \
   /opt/homebrew/include/QtGui/qtransform.h \
+  /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
+  /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
+  /opt/homebrew/include/QtWidgets/qabstractslider.h \
+  /opt/homebrew/include/QtWidgets/qabstractspinbox.h \
   /opt/homebrew/include/QtWidgets/qdialog.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
   /opt/homebrew/include/QtWidgets/qlineedit.h \
+  /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
+  /opt/homebrew/include/QtWidgets/qslider.h \
+  /opt/homebrew/include/QtWidgets/qstyle.h \
+  /opt/homebrew/include/QtWidgets/qstyleoption.h \
+  /opt/homebrew/include/QtWidgets/qtabbar.h \
+  /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/include/QtWidgets/qtwidgets-config.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
@@ -2249,6 +2280,7 @@ CMakeFiles/client.dir/src/client/main.cpp.o: /Users/mihyar/Desktop/OS2\ Project/
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QInputDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
@@ -2256,6 +2288,7 @@ CMakeFiles/client.dir/src/client/main.cpp.o: /Users/mihyar/Desktop/OS2\ Project/
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTextEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qinputdialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
@@ -3186,6 +3219,7 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/q23utility.h \
+  /opt/homebrew/include/QtCore/qabstractitemmodel.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
   /opt/homebrew/include/QtCore/qanystringview.h \
   /opt/homebrew/include/QtCore/qarraydata.h \
@@ -3232,6 +3266,7 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
   /opt/homebrew/include/QtCore/qlatin1stringview.h \
   /opt/homebrew/include/QtCore/qline.h \
   /opt/homebrew/include/QtCore/qlist.h \
+  /opt/homebrew/include/QtCore/qlocale.h \
   /opt/homebrew/include/QtCore/qlogging.h \
   /opt/homebrew/include/QtCore/qmalloc.h \
   /opt/homebrew/include/QtCore/qmap.h \
@@ -3252,6 +3287,7 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
   /opt/homebrew/include/QtCore/qprocessordetection.h \
   /opt/homebrew/include/QtCore/qrect.h \
   /opt/homebrew/include/QtCore/qrefcount.h \
+  /opt/homebrew/include/QtCore/qregularexpression.h \
   /opt/homebrew/include/QtCore/qscopedpointer.h \
   /opt/homebrew/include/QtCore/qscopeguard.h \
   /opt/homebrew/include/QtCore/qset.h \
@@ -3329,22 +3365,34 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
   /opt/homebrew/include/QtGui/qtguiexports.h \
   /opt/homebrew/include/QtGui/qtguiglobal.h \
   /opt/homebrew/include/QtGui/qtransform.h \
+  /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
+  /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
+  /opt/homebrew/include/QtWidgets/qabstractslider.h \
+  /opt/homebrew/include/QtWidgets/qabstractspinbox.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
+  /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
+  /opt/homebrew/include/QtWidgets/qslider.h \
+  /opt/homebrew/include/QtWidgets/qstyle.h \
+  /opt/homebrew/include/QtWidgets/qstyleoption.h \
+  /opt/homebrew/include/QtWidgets/qtabbar.h \
+  /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/include/QtWidgets/qtwidgets-config.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTextEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h \
@@ -3358,7 +3406,7 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h:
 
-/opt/homebrew/lib/QtWidgets.framework/Headers/qfiledialog.h:
+/opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h:
 
@@ -3368,15 +3416,27 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QTextEdit:
 
+/opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox:
+
 /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout:
 
-/opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog:
+/opt/homebrew/lib/QtCore.framework/Headers/QFile:
 
 /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h:
 
+/opt/homebrew/include/QtWidgets/qtabwidget.h:
+
+/opt/homebrew/include/QtWidgets/qtabbar.h:
+
+/opt/homebrew/include/QtWidgets/qstyleoption.h:
+
+/opt/homebrew/include/QtWidgets/qslider.h:
+
 /opt/homebrew/include/QtWidgets/qsizepolicy.h:
+
+/opt/homebrew/include/QtWidgets/qrubberband.h:
 
 /opt/homebrew/include/QtWidgets/qlayout.h:
 
@@ -3386,11 +3446,15 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
 
 /opt/homebrew/include/QtWidgets/qboxlayout.h:
 
+/opt/homebrew/include/QtWidgets/qabstractspinbox.h:
+
 /opt/homebrew/include/QtWidgets/qabstractscrollarea.h:
 
 /opt/homebrew/include/QtWidgets/qabstractbutton.h:
 
 /opt/homebrew/include/QtGui/qwindowdefs.h:
+
+/opt/homebrew/include/QtGui/qvalidator.h:
 
 /opt/homebrew/include/QtGui/qtguiglobal.h:
 
@@ -3484,6 +3548,8 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
 
 /opt/homebrew/include/QtCore/qscopedpointer.h:
 
+/opt/homebrew/include/QtCore/qregularexpression.h:
+
 /opt/homebrew/include/QtCore/qrefcount.h:
 
 /opt/homebrew/include/QtCore/qrect.h:
@@ -3574,6 +3640,8 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
 
 /opt/homebrew/include/QtCore/qalgorithms.h:
 
+/opt/homebrew/include/QtCore/qabstractitemmodel.h:
+
 /opt/homebrew/include/QtCore/q23utility.h:
 
 /opt/homebrew/include/QtCore/q20type_traits.h:
@@ -3651,8 +3719,6 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o: src/client/moc_ChatClient
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_types/_sigaltstack.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_types/_sa_family_t.h:
-
-/opt/homebrew/include/QtCore/qdir.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_types/_rune_t.h:
 
@@ -4022,6 +4088,8 @@ src/client/moc_ChatClient.cpp:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QScrollBar:
 
+/opt/homebrew/lib/QtCore.framework/Headers/qdir.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__type_traits/is_signed.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__type_traits/is_primary_template.h:
@@ -4275,6 +4343,8 @@ src/client/moc_ChatClient.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__numeric/accumulate.h:
+
+/opt/homebrew/include/QtWidgets/qstyle.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_types/_int64_t.h:
 
@@ -4744,6 +4814,8 @@ src/client/moc_ChatClient.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__chrono/year.h:
 
+/opt/homebrew/include/QtWidgets/qabstractitemdelegate.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap_until.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__chrono/weekday.h:
@@ -4970,6 +5042,8 @@ src/client/moc_ChatClient.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/lexicographical_compare_three_way.h:
 
+/opt/homebrew/lib/QtCore.framework/Headers/QDir:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__fwd/sstream.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
@@ -5021,6 +5095,8 @@ src/client/moc_ChatClient.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/mach/machine/_structs.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/ranges_set_symmetric_difference.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
@@ -5088,6 +5164,8 @@ src/client/moc_ChatClient.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__type_traits/can_extract_key.h:
 
+/opt/homebrew/include/QtWidgets/qdialogbuttonbox.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h:
 
 /opt/homebrew/include/QtCore/qstringconverter_base.h:
@@ -5151,6 +5229,8 @@ src/client/moc_ChatClient.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/ranges_make_heap.h:
+
+/opt/homebrew/lib/QtCore.framework/Headers/QTextStream:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__type_traits/is_volatile.h:
 
@@ -5402,6 +5482,8 @@ src/client/moc_ChatClient.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
 
+/opt/homebrew/lib/QtCore.framework/Headers/qfile.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/next_permutation.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/move.h:
@@ -5519,6 +5601,8 @@ src/client/moc_ChatClient.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/arm/_mcontext.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/generate.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/uniform_random_bit_generator_adaptor.h:
 
@@ -5653,6 +5737,8 @@ src/client/moc_ChatClient.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/rotate_copy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__algorithm/ranges_includes.h:
+
+/opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/AvailabilityInternalLegacy.h:
 

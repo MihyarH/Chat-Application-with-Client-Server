@@ -1,0 +1,12 @@
+<b style='color: cyan;'>Mihyar:</b> <span style='color: black;'>Hello</span>
+<b style='color: cyan;'>Andrei:</b> <span style='color: black;'>Hi MIhyar, This is a private message </span>
+<b style='color: green;'>Private to Mihyar:</b> Hi
+<b style='color: green;'>You:</b> Hello
+<b style='color: cyan;'>Andrei:</b> <span style='color: black;'>Ciao Mihai</span>
+<b style='color: cyan;'>Andrei:</b> <span style='color: black;'>Ciao Mihai</span>
+<b style='color: cyan;'>Andrei:</b> <span style='color: black;'>Ciao</span>
+<b style='color: navy;'>Omar:</b> <span style='color: black;'>j</span>
+<b style='color: green;'>You:</b> Hello
+<b style='color: cyan;'>Berke:</b> <span style='color: black;'>Hi</span>
+<b style='color: cyan;'>Mihyar:</b> <span style='color: black;'>Hello</span>
+<b style='color: green;'>You:</b> Hi

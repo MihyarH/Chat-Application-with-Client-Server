@@ -129,6 +129,7 @@ client: CMakeFiles/client.dir/src/client/ChatClient.cpp.o
 client: CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o
 client: CMakeFiles/client.dir/build.make
 client: /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets
+client: /opt/homebrew/lib/QtNetwork.framework/Versions/A/QtNetwork
 client: /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui
 client: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 client: CMakeFiles/client.dir/link.txt

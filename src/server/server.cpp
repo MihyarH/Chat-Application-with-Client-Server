@@ -20,6 +20,18 @@ struct Client {
 std::vector<Client> clients;
 std::mutex client_mutex;
 
+void broadcastRecipientList() {
+    std::string recipientList = "UPDATE_RECIPIENTS";
+    for (const auto& client : clients) {
+        recipientList += "," + client.username;
+    }
+    int length = recipientList.length();
+    for (const auto& client : clients) {
+        send(client.socket, &length, sizeof(length), 0);
+        send(client.socket, recipientList.c_str(), length, 0);
+    }
+}
+
 void handle_client(int client_socket) {
     char buffer[1024];
     std::string username;
@@ -44,6 +56,7 @@ void handle_client(int client_socket) {
         std::lock_guard<std::mutex> lock(client_mutex);
         clients.push_back({client_socket, username});
         std::cout << "Added client: " << username << " with socket: " << client_socket << std::endl;
+        broadcastRecipientList();
     }
 
     while (true) {
@@ -59,15 +72,39 @@ void handle_client(int client_socket) {
             break; // Connection closed or error
         }
         buffer[length] = '\0';
-        std::string message = username + ": " + buffer;
+        std::string message = buffer;
 
-        std::lock_guard<std::mutex> lock(client_mutex);
-        for (const auto& client : clients) {
-            if (client.socket != client_socket) {
-                int msg_length = message.length();
-                send(client.socket, &msg_length, sizeof(msg_length), 0);
-                send(client.socket, message.c_str(), msg_length, 0);
-                std::cout << "Sent message to client: " << client.socket << std::endl;
+        // Check for private message
+        if (message[0] == '@') {
+            size_t pos = message.find(": ");
+            if (pos != std::string::npos) {
+                std::string recipient = message.substr(1, pos - 1);
+                std::string private_message = message.substr(pos + 2);
+
+                std::lock_guard<std::mutex> lock(client_mutex);
+                auto it = std::find_if(clients.begin(), clients.end(), [&recipient](const Client& client) {
+                    return client.username == recipient;
+                });
+                if (it != clients.end()) {
+                    int msg_length = private_message.length();
+                    send(it->socket, &msg_length, sizeof(msg_length), 0);
+                    send(it->socket, private_message.c_str(), msg_length, 0);
+                    std::cout << "Sent private message to client: " << it->username << std::endl;
+                } else {
+                    std::cerr << "Recipient not found: " << recipient << std::endl;
+                }
+            }
+        } else {
+            std::string broadcast_message = username + ": " + message;
+
+            std::lock_guard<std::mutex> lock(client_mutex);
+            for (const auto& client : clients) {
+                if (client.socket != client_socket) {
+                    int msg_length = broadcast_message.length();
+                    send(client.socket, &msg_length, sizeof(msg_length), 0);
+                    send(client.socket, broadcast_message.c_str(), msg_length, 0);
+                    std::cout << "Sent message to client: " << client.socket << std::endl;
+                }
             }
         }
     }
@@ -79,6 +116,7 @@ void handle_client(int client_socket) {
         return client.socket == client_socket;
     }), clients.end());
     std::cout << "Removed client: " << client_socket << std::endl;
+    broadcastRecipientList();
 }
 
 void run_server() {

@@ -1,0 +1,7 @@
+# ninja log v5
+10	42	1716750347170586842	/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/cmake-build-debug/src/client/moc_ChatClient.cpp	9c0c5a234a974f9d
+42	1163	1716750348285488208	CMakeFiles/client.dir/src/client/main.cpp.o	6e91f10c54e0af15
+43	1249	1716750348373361436	CMakeFiles/client.dir/src/client/ChatClient.cpp.o	13ac6b847b83b1ab
+10	42	1716750347170586842	src/client/moc_ChatClient.cpp	9c0c5a234a974f9d
+43	1141	1716750348260506738	CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o	98295ad4ab5165b2
+1250	1446	1716750348571498349	client	a5c463e496e3fcc6

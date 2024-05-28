@@ -108,6 +108,8 @@ server_EXTERNAL_OBJECTS =
 server: CMakeFiles/server.dir/src/server/main.cpp.o
 server: CMakeFiles/server.dir/src/server/server.cpp.o
 server: CMakeFiles/server.dir/build.make
+server: /opt/homebrew/lib/QtNetwork.framework/Versions/A/QtNetwork
+server: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 server: CMakeFiles/server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/mihyar/Desktop/OS2 Project/Chat-Application-with-Client-Server/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)

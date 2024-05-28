@@ -962,6 +962,7 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o
  /opt/homebrew/include/QtCore/q20memory.h
  /opt/homebrew/include/QtCore/q20type_traits.h
  /opt/homebrew/include/QtCore/q23utility.h
+ /opt/homebrew/include/QtCore/qabstractitemmodel.h
  /opt/homebrew/include/QtCore/qalgorithms.h
  /opt/homebrew/include/QtCore/qanystringview.h
  /opt/homebrew/include/QtCore/qarraydata.h
@@ -996,7 +997,6 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o
  /opt/homebrew/include/QtCore/qdatetime.h
  /opt/homebrew/include/QtCore/qdeadlinetimer.h
  /opt/homebrew/include/QtCore/qdebug.h
- /opt/homebrew/include/QtCore/qdir.h
  /opt/homebrew/include/QtCore/qelapsedtimer.h
  /opt/homebrew/include/QtCore/qendian.h
  /opt/homebrew/include/QtCore/qeventloop.h
@@ -1043,6 +1043,7 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o
  /opt/homebrew/include/QtCore/qprocessordetection.h
  /opt/homebrew/include/QtCore/qrect.h
  /opt/homebrew/include/QtCore/qrefcount.h
+ /opt/homebrew/include/QtCore/qregularexpression.h
  /opt/homebrew/include/QtCore/qscopedpointer.h
  /opt/homebrew/include/QtCore/qscopeguard.h
  /opt/homebrew/include/QtCore/qset.h
@@ -1123,27 +1124,44 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o
  /opt/homebrew/include/QtGui/qtguiexports.h
  /opt/homebrew/include/QtGui/qtguiglobal.h
  /opt/homebrew/include/QtGui/qtransform.h
+ /opt/homebrew/include/QtGui/qvalidator.h
  /opt/homebrew/include/QtGui/qwindowdefs.h
  /opt/homebrew/include/QtWidgets/qabstractbutton.h
+ /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h
  /opt/homebrew/include/QtWidgets/qabstractscrollarea.h
  /opt/homebrew/include/QtWidgets/qabstractslider.h
+ /opt/homebrew/include/QtWidgets/qabstractspinbox.h
  /opt/homebrew/include/QtWidgets/qboxlayout.h
  /opt/homebrew/include/QtWidgets/qdialog.h
+ /opt/homebrew/include/QtWidgets/qdialogbuttonbox.h
  /opt/homebrew/include/QtWidgets/qframe.h
  /opt/homebrew/include/QtWidgets/qgridlayout.h
  /opt/homebrew/include/QtWidgets/qlayout.h
  /opt/homebrew/include/QtWidgets/qlayoutitem.h
+ /opt/homebrew/include/QtWidgets/qrubberband.h
  /opt/homebrew/include/QtWidgets/qsizepolicy.h
+ /opt/homebrew/include/QtWidgets/qslider.h
+ /opt/homebrew/include/QtWidgets/qstyle.h
+ /opt/homebrew/include/QtWidgets/qstyleoption.h
+ /opt/homebrew/include/QtWidgets/qtabbar.h
+ /opt/homebrew/include/QtWidgets/qtabwidget.h
  /opt/homebrew/include/QtWidgets/qtwidgets-config.h
  /opt/homebrew/include/QtWidgets/qtwidgetsexports.h
  /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h
  /opt/homebrew/include/QtWidgets/qwidget.h
+ /opt/homebrew/lib/QtCore.framework/Headers/QDir
+ /opt/homebrew/lib/QtCore.framework/Headers/QFile
  /opt/homebrew/lib/QtCore.framework/Headers/QString
+ /opt/homebrew/lib/QtCore.framework/Headers/QTextStream
+ /opt/homebrew/lib/QtCore.framework/Headers/qdir.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qfile.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qtextstream.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication
- /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox
  /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout
  /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QMessageBox
  /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton
  /opt/homebrew/lib/QtWidgets.framework/Headers/QScrollBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar
@@ -1152,8 +1170,9 @@ CMakeFiles/client.dir/src/client/ChatClient.cpp.o
  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget
  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h
- /opt/homebrew/lib/QtWidgets.framework/Headers/qfiledialog.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qmessagebox.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollbar.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h
@@ -2084,6 +2103,7 @@ CMakeFiles/client.dir/src/client/main.cpp.o
  /opt/homebrew/include/QtCore/q20memory.h
  /opt/homebrew/include/QtCore/q20type_traits.h
  /opt/homebrew/include/QtCore/q23utility.h
+ /opt/homebrew/include/QtCore/qabstractitemmodel.h
  /opt/homebrew/include/QtCore/qalgorithms.h
  /opt/homebrew/include/QtCore/qanystringview.h
  /opt/homebrew/include/QtCore/qarraydata.h
@@ -2158,6 +2178,7 @@ CMakeFiles/client.dir/src/client/main.cpp.o
  /opt/homebrew/include/QtCore/qprocessordetection.h
  /opt/homebrew/include/QtCore/qrect.h
  /opt/homebrew/include/QtCore/qrefcount.h
+ /opt/homebrew/include/QtCore/qregularexpression.h
  /opt/homebrew/include/QtCore/qscopedpointer.h
  /opt/homebrew/include/QtCore/qscopeguard.h
  /opt/homebrew/include/QtCore/qset.h
@@ -2237,13 +2258,23 @@ CMakeFiles/client.dir/src/client/main.cpp.o
  /opt/homebrew/include/QtGui/qtguiexports.h
  /opt/homebrew/include/QtGui/qtguiglobal.h
  /opt/homebrew/include/QtGui/qtransform.h
+ /opt/homebrew/include/QtGui/qvalidator.h
  /opt/homebrew/include/QtGui/qwindowdefs.h
  /opt/homebrew/include/QtWidgets/qabstractbutton.h
+ /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h
  /opt/homebrew/include/QtWidgets/qabstractscrollarea.h
+ /opt/homebrew/include/QtWidgets/qabstractslider.h
+ /opt/homebrew/include/QtWidgets/qabstractspinbox.h
  /opt/homebrew/include/QtWidgets/qdialog.h
  /opt/homebrew/include/QtWidgets/qframe.h
  /opt/homebrew/include/QtWidgets/qlineedit.h
+ /opt/homebrew/include/QtWidgets/qrubberband.h
  /opt/homebrew/include/QtWidgets/qsizepolicy.h
+ /opt/homebrew/include/QtWidgets/qslider.h
+ /opt/homebrew/include/QtWidgets/qstyle.h
+ /opt/homebrew/include/QtWidgets/qstyleoption.h
+ /opt/homebrew/include/QtWidgets/qtabbar.h
+ /opt/homebrew/include/QtWidgets/qtabwidget.h
  /opt/homebrew/include/QtWidgets/qtwidgets-config.h
  /opt/homebrew/include/QtWidgets/qtwidgetsexports.h
  /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h
@@ -2251,6 +2282,7 @@ CMakeFiles/client.dir/src/client/main.cpp.o
  /opt/homebrew/lib/QtCore.framework/Headers/QString
  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox
  /opt/homebrew/lib/QtWidgets.framework/Headers/QInputDialog
  /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit
  /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton
@@ -2258,6 +2290,7 @@ CMakeFiles/client.dir/src/client/main.cpp.o
  /opt/homebrew/lib/QtWidgets.framework/Headers/QTextEdit
  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget
  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qinputdialog.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h
@@ -3189,6 +3222,7 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o
  /opt/homebrew/include/QtCore/q20memory.h
  /opt/homebrew/include/QtCore/q20type_traits.h
  /opt/homebrew/include/QtCore/q23utility.h
+ /opt/homebrew/include/QtCore/qabstractitemmodel.h
  /opt/homebrew/include/QtCore/qalgorithms.h
  /opt/homebrew/include/QtCore/qanystringview.h
  /opt/homebrew/include/QtCore/qarraydata.h
@@ -3235,6 +3269,7 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o
  /opt/homebrew/include/QtCore/qlatin1stringview.h
  /opt/homebrew/include/QtCore/qline.h
  /opt/homebrew/include/QtCore/qlist.h
+ /opt/homebrew/include/QtCore/qlocale.h
  /opt/homebrew/include/QtCore/qlogging.h
  /opt/homebrew/include/QtCore/qmalloc.h
  /opt/homebrew/include/QtCore/qmap.h
@@ -3255,6 +3290,7 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o
  /opt/homebrew/include/QtCore/qprocessordetection.h
  /opt/homebrew/include/QtCore/qrect.h
  /opt/homebrew/include/QtCore/qrefcount.h
+ /opt/homebrew/include/QtCore/qregularexpression.h
  /opt/homebrew/include/QtCore/qscopedpointer.h
  /opt/homebrew/include/QtCore/qscopeguard.h
  /opt/homebrew/include/QtCore/qset.h
@@ -3332,22 +3368,34 @@ CMakeFiles/client.dir/src/client/moc_ChatClient.cpp.o
  /opt/homebrew/include/QtGui/qtguiexports.h
  /opt/homebrew/include/QtGui/qtguiglobal.h
  /opt/homebrew/include/QtGui/qtransform.h
+ /opt/homebrew/include/QtGui/qvalidator.h
  /opt/homebrew/include/QtGui/qwindowdefs.h
  /opt/homebrew/include/QtWidgets/qabstractbutton.h
+ /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h
  /opt/homebrew/include/QtWidgets/qabstractscrollarea.h
+ /opt/homebrew/include/QtWidgets/qabstractslider.h
+ /opt/homebrew/include/QtWidgets/qabstractspinbox.h
  /opt/homebrew/include/QtWidgets/qframe.h
+ /opt/homebrew/include/QtWidgets/qrubberband.h
  /opt/homebrew/include/QtWidgets/qsizepolicy.h
+ /opt/homebrew/include/QtWidgets/qslider.h
+ /opt/homebrew/include/QtWidgets/qstyle.h
+ /opt/homebrew/include/QtWidgets/qstyleoption.h
+ /opt/homebrew/include/QtWidgets/qtabbar.h
+ /opt/homebrew/include/QtWidgets/qtabwidget.h
  /opt/homebrew/include/QtWidgets/qtwidgets-config.h
  /opt/homebrew/include/QtWidgets/qtwidgetsexports.h
  /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h
  /opt/homebrew/include/QtWidgets/qwidget.h
  /opt/homebrew/lib/QtCore.framework/Headers/QString
  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
+ /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox
  /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit
  /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton
  /opt/homebrew/lib/QtWidgets.framework/Headers/QStatusBar
  /opt/homebrew/lib/QtWidgets.framework/Headers/QTextEdit
  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget
+ /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/qstatusbar.h
