@@ -18,8 +18,8 @@ public:
     ChatClient(const char* server_ip, int port, const QString& username, const QString& password, QWidget* parent = nullptr);
     ~ChatClient();
 
-    private slots:
-        void sendMessage();
+private slots:
+    void sendMessage();
     void sendPrivateMessage();
     void updateStatus(const QString& message);
     void handleReturnPressed();

@@ -7,11 +7,15 @@
 #include <QTextStream>
 #include <QDir>
 #include <QComboBox>
+#include <QInputDialog>
+#include <QCryptographicHash>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <cstring>
 #include <iostream>
+#include <QDebug>
+#include <QMessageBox>
 
 ChatClient::ChatClient(const char* server_ip, int port, const QString& username, const QString& password, QWidget* parent)
     : QWidget(parent), server_ip(server_ip), port(port), sock(-1), username(username) {
@@ -24,6 +28,7 @@ ChatClient::ChatClient(const char* server_ip, int port, const QString& username,
         updateStatus("Connected to server.");
     } else {
         updateStatus("Failed to connect to server.");
+        QMessageBox::critical(this, "Connection Error", "Failed to connect to server.");
     }
     loadChatHistory();
 }
@@ -38,6 +43,9 @@ ChatClient::~ChatClient() {
     saveChatHistory();
 }
 
+/**
+ * @brief Sets up the user interface of the chat client.
+ */
 void ChatClient::setupUI() {
     QVBoxLayout* mainLayout = new QVBoxLayout(this);
 
@@ -71,6 +79,9 @@ void ChatClient::setupUI() {
     setStyleSheet("background-color: #f0f0f0; font-family: Arial, sans-serif; font-size: 14px;");
 }
 
+/**
+ * @brief Connects signals and slots for the UI components.
+ */
 void ChatClient::connectSignals() {
     connect(sendButton, &QPushButton::clicked, this, &ChatClient::sendMessage);
     connect(privateButton, &QPushButton::clicked, this, &ChatClient::sendPrivateMessage);
@@ -80,6 +91,7 @@ void ChatClient::connectSignals() {
 void ChatClient::sendMessage() {
     if (sock == -1) {
         updateStatus("Not connected to the server.");
+        QMessageBox::warning(this, "Connection Error", "Not connected to the server.");
         return;
     }
 
@@ -99,6 +111,7 @@ void ChatClient::sendMessage() {
 void ChatClient::sendPrivateMessage() {
     if (sock == -1) {
         updateStatus("Not connected to the server.");
+        QMessageBox::warning(this, "Connection Error", "Not connected to the server.");
         return;
     }
 
@@ -184,12 +197,14 @@ void ChatClient::receiveMessages() {
 }
 
 void ChatClient::sendLoginDetails(const QString& username, const QString& password) {
+    // Hash the password before sending
+    QByteArray hashedPassword = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256);
     std::string user_msg = "USER:" + username.toStdString();
     int length = user_msg.length();
     send(sock, &length, sizeof(length), 0);
     send(sock, user_msg.c_str(), length, 0);
 
-    std::string pass_msg = "PASS:" + password.toStdString();
+    std::string pass_msg = "PASS:" + hashedPassword.toHex().toStdString();
     length = pass_msg.length();
     send(sock, &length, sizeof(length), 0);
     send(sock, pass_msg.c_str(), length, 0);
@@ -215,6 +230,8 @@ int ChatClient::connectToServer() {
 
 void ChatClient::updateStatus(const QString& message) {
     statusBar->showMessage(message);
+    // Log the status message to the console for debugging
+    qDebug() << message;
 }
 
 void ChatClient::loadChatHistory() {
